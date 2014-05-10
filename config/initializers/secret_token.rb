@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Euphexya::Application.config.secret_key_base = '115a03e7096a720df1978a0790282c6d3a0764dd1f69bbfc35635e04a6bc37548e83f36928dc3c641644583b0f3ed5a18cbc4a1ff84c70e0048f61e98d8ad428'
+Euphexya::Application.config.secret_key_base = '62a2c1b0864eff67b32a62d2f4cf2e4dc32db007422de8ae834e559def3b9c5ab3e673d09ea9a0449345373e537e325a1de84fcb5639df0f0362b81176061005'
