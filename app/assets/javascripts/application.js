@@ -33,7 +33,7 @@ $(window).load(function() {
 	// Load animation
 	setTimeout(function(){
 		$('.loader div').css({'margin-top': 0, 'opacity': 0});
-		$('.loader').delay(500).fadeOut(150);
+		$('.loader').delay(500).fadeOut(250);
 	}, 185);
 
 
