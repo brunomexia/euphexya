@@ -10,9 +10,19 @@
 </head>
 <body>
 
+<div class="pallet clearfix">
+	<div id="accepted"></div>
+	<div id="standard"></div>
+	<div id="primary"></div>
+	<div id="warning"></div>
+	<div id="error"></div>
+</div>
+
+
 <div class="loader">
-	<div>
-		<div class="icon ion-loading-c"></div>
+	<div class="clearfix">
+		<section class="icon ion-loading-a"></section>
+		<h1>Euphexya</h1>
 	</div>
 </div>
 
@@ -20,9 +30,9 @@
 
 
 
-<header class="clearfix">
+<header class="mainhead clearfix">
 	<div class="logo">
-		<h1>Euphexya</h1>
+		<h1>Euphexya</h1><span>|Home of Knowledge|</span>
 	</div>
 	<nav class="clearfix">
 		<a href="#">Who We Are</a>
@@ -36,7 +46,7 @@
 	<%= yield %>
 </div>
 
-<footer>Footer</footer>
+<footer></footer>
 
 
 

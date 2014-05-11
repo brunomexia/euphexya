@@ -1,0 +1,50 @@
+@import 'vars.css.scss';
+
+/*CYCLE2 STYLES========================================
+
+=======================================================
+=======================================================
+=======================================================
+
+========================================CYCLE2 STYLES*/
+
+#progress {
+    position: absolute; top: 0; height: 6px; background: darken($ColPrimary, 15%); z-index: 2000;
+}
+.cycle-slide {
+	width:100%; background-position:center !important;
+		background-size:100% auto !important; min-height:200px;
+}
+.cycle-pager { 
+    text-align: center; width: 100%; z-index: 500; position: absolute; top: 0; overflow: hidden;
+     border-top:6px solid lighten($ColPrimary, 10%); background:rgba(#111, 0.4);
+}
+.cycle-pager span { 
+    font-family: arial; font-size: 50px; width: 16px; height: 16px; 
+    display: inline-block; color: #ddd; cursor: pointer; 
+}
+.cycle-pager span.cycle-pager-active { color: #2D90F0;}
+.cycle-pager > * { cursor: pointer;}
+
+.cycle-togglePause { cursor:pointer; position:absolute; top:25px; left: 25px; z-index:6000; 
+	font-family: Verdana, Helvetica, Sans-Serif; padding:10px; background:rgba(0, 0, 0, 0.6); 
+	color:white; font-weight:bold; border:2px solid black;/*display:block !important;*/
+}
+
+.cycle-overlay { position:absolute; padding:17px 64px; background:rgba(#111, 0.4); color:#FAFAFA;
+	bottom:0; left:0; right:0; z-index:10000; }
+
+@media all and (max-width:860px) {  
+    .home_banner_cycle .cycle-slideshow .cycle-slide { width:100%; height:100%; } 
+}
+
+@media all and (max-width:550px) { 
+    .home_banner_cycle .cycle-slideshow .cycle-slide { width:auto; height:100%; } 
+}
+/*CYCLE2 STYLES========================================
+
+=======================================================
+=======================================================
+=======================================================
+
+========================================CYCLE2 STYLES*/

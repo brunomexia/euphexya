@@ -1,0 +1,23 @@
+/* SASS Mixins and Variables */
+
+
+$ColAccepted: #71E180;
+$ColStandard: #54D0D9;
+$ColPrimary: #2D90F0;
+$ColWarning: #F0C851;
+$ColError: #F86055;
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($speed) {
+	-webkit-transition: all $speed ease-out;
+    -moz-transition: all $speed ease-out;
+    -o-transition: all $speed ease-out;
+    transition: all $speed ease-out;
+}
