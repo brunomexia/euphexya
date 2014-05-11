@@ -13,11 +13,11 @@
 }
 .cycle-slide {
 	width:100%; background-position:center !important;
-		background-size:100% auto !important; min-height:200px;
+		background-size:cover !important; min-height:200px;
 }
 .cycle-pager { 
     text-align: center; width: 100%; z-index: 500; position: absolute; top: 0; overflow: hidden;
-     border-top:6px solid lighten($ColPrimary, 10%); background:rgba(#111, 0.4);
+     border-top:6px solid lighten($ColPrimary, 10%); background:rgba(lighten($ColPrimary, 10%), 0.4);
 }
 .cycle-pager span { 
     font-family: arial; font-size: 50px; width: 16px; height: 16px; 

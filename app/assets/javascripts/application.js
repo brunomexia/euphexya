@@ -34,7 +34,7 @@ $(window).load(function() {
 	setTimeout(function(){
 		$('.loader div').css({'margin-top': 0, 'opacity': 0});
 		$('.loader').delay(500).fadeOut(150);
-	}, 1585);
+	}, 185);
 
 
 

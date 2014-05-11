@@ -51,18 +51,19 @@ a { color: #111; text-decoration:none; }
 
 
 .mainhead { position:fixed; top:0; left:0; right:0; background:rgba($ColPrimary, 0.95); 
-	padding:12px 35px; color:#fafafa; z-index:10000;
+	padding:19px 35px; color:#fafafa; z-index:10000;
 
-	.logo { float:left;
+	.logo { float:left; background:url('euphexya-logo-white.png'); padding:15px 0 15px 70px;
+		background-size: auto 100%; background-repeat: no-repeat;
 
 		h1 { font-weight:500; line-height:1; display:inline-block; }
-		span { font-weight:300; font-size:0.75em; height:100%; margin: 0 0 0 15px; }
+		span { display:inline-block; font-weight:300; font-size:0.75em; height:100%; margin: 0 0 0 15px; }
 	}
 
-	nav { float:right; 
+	nav { float:right; padding:15px 0;
 
 		a { display:block; float:left; color: #FAFAFA; background:rgba(lighten($ColPrimary, 24%), 0.4); 
-			margin: 0 5px; padding:6px 9px;
+			margin: 0 5px; padding:6px 10px;
 			@include border-radius(4px); 
 			@include transition(200ms);
 
