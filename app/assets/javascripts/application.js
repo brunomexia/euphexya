@@ -14,3 +14,17 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	// Code
+});
+
+$(window).load(function() {
+	
+	// Load animation
+	setTimeout(function(){
+		$('.loader div').css({'margin-top': 0, 'opacity': 0});
+		$('.loader').delay(500).fadeOut(150);
+	}, 185);
+
+});

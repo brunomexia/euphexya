@@ -1,0 +1,81 @@
+
+/* SASS Mixins and Variables */
+
+
+$ColAccepted: #71E180;
+$ColStandard: #54D0D9;
+$ColPrimary: #5A89F0;
+$ColWarning: #F0C851;
+$ColError: #F86055;
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($speed) {
+	-webkit-transition: all $speed ease-out;
+    -moz-transition: all $speed ease-out;
+    -o-transition: all $speed ease-out;
+    transition: all $speed ease-out;
+}
+
+
+
+
+
+
+
+
+
+/* Layout CSS */
+
+
+* { margin:0; padding:0; }
+html { font-family:'Titillium Web', Segoe UI, Verdana, Arial, sans-serif; font-weight:300; }
+a { color: #111; text-decoration:none; }
+
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+
+.loader { position:fixed; top:0; left:0; bottom:0; right:0; background: white; z-index:49999; font-size:1000%; 
+
+	div { background: $ColPrimary; margin:45px 0 0 0; @include transition(350ms); 
+
+		.icon { margin:0 0 0 10%; color: white; @include transition(350ms); }
+	}
+}
+
+
+
+
+
+
+header { position:fixed; top:0; left:0; right:0; background:rgba($ColPrimary, 0.8); 
+	padding:10px 35px; color:#fafafa;
+
+	.logo { float:left; 
+
+		h1 { font-weight:400; }
+	}
+
+
+
+
+
+	nav { float:right; 
+
+		a { display:block; float:left; color: #FAFAFA; background:rgba(darken($ColPrimary, 4%), 0.4); 
+			margin: 0 5px; padding:6px 9px;
+			@include border-radius(4px); 
+			@include transition(200ms);
+
+			&:hover {
+				background:rgba(darken($ColPrimary, 17%), 0.4);
+			}
+		}
+	}
+}

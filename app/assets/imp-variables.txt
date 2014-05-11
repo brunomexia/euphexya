@@ -1,0 +1,5 @@
+$ColAccepted: #71E180;
+$ColStandard: #54D0D9;
+$ColPrimary: #5A89F0;
+$ColWarning: #F0C851;
+$ColError: #F86055;
