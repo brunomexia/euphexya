@@ -10,7 +10,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>  
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="<%= controller_name %>" class="<%= action_name %>">
 
 <div class="pallet clearfix">
 	<div id="accepted"></div>
@@ -21,25 +21,15 @@
 </div>
 
 
-<div class="loader">
-	<div class="clearfix">
-		<section class="icon ion-loading-a"></section>
-		<h1>Euphexya</h1>
-	</div>
-</div>
-
-
-
-
 
 <header class="mainhead clearfix">
 	<div class="logo">
-		<h1>Euphexya</h1><span>| Home of Knowledge | - Follow fresh and original tutorials</span>
+		<h1><%= link_to 'Euphexya', controller: 'welcome' %></h1><span>| Home of Knowledge | - Follow fresh and original tutorials</span>
 	</div>
 	<nav class="clearfix">
 		<a href="#">Who We Are</a>
 		<a href="#">Tutorials</a>
-		<a href="#">Blog</a>
+		<%= link_to 'Blog', controller: 'articles' %>
 		<a href="#">u-Teach</a>
 	</nav>
 </header>

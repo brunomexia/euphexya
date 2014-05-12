@@ -15,61 +15,60 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){
-	// Code
-	
-    $('.loader div').css('margin-top', $(window).height()/2 - $('.loader div').outerHeight()/2);
-});
 
-$(window).load(function() {
+$(function() {
+  	
+    $(document).ready(function(){
 
-	// Body Positioning
-	var mhHeight = $('.mainhead').outerHeight();
-	var windowHeight = $(window).height();
-	var homedesHeight = $('.home-destaque').outerHeight();
+        /*//EdiSlider
 
-	$('.body').css('margin-top', mhHeight);
-	$('.cycle-slide').height(windowHeight - mhHeight - homedesHeight);
-	// Load animation
-	setTimeout(function(){
-		$('.loader div').css({'margin-top': 0, 'opacity': 0});
-		$('.loader').delay(500).fadeOut(250);
-	}, 185);
+        var EdiSlider = $('.home-slider');
+
+        EdiSlider.find('.home-slide').each(function(index) {
+            var ite = $(this).attr("id");
+            document.write(ite);
+        });*/
 
 
 
+    	//HOMEPAGE JS
+    	if ($("#welcome.index").length) {
+
+    		// Code 
+    		$('.loader div').css('margin-top', $(window).height()/2 - $('.loader div').outerHeight()/2);
+
+    		// Body Positioning
+    		var mhHeight = $('.mainhead').outerHeight();
+            var windowWidth = $(window).width();
+    		var windowHeight = $(window).height();
+    		var homedesHeight = $('.home-destaque').outerHeight();
 
 
+            //Get the slider and fix the height
+            $('#home-slider').bjqs({
+                'width' : windowWidth,
+                'height' : windowHeight - mhHeight - homedesHeight,
+                'animtype' : 'slide',
+                'usecaptions' : true,                
+                'responsive' : true
+            });
 
-	var progress = $('#progress'),
-        slideshow = $( '.home_banner_cycle .cycle-slideshow' );
+    		setTimeout(function() {
+    		    $('.body').css('margin-top', mhHeight);
 
-    slideshow.on( 'cycle-initialized cycle-before', function( e, opts ) {
-        progress.stop(true).css( 'width', 0 );
+    		    
+
+    		    // Load animation
+    		    setTimeout(function(){
+    		        $('.loader div').css({'margin-top': 0, 'opacity': 0});
+    		        $('.loader').delay(500).fadeOut(250);
+    		    }, 185);
+    		}, 1500);  
+
+      	}
+
     });
 
-    slideshow.on( 'cycle-initialized cycle-after', function( e, opts ) {
-        if ( ! slideshow.is('.cycle-paused') )
-            progress.animate({ 'width' : slideshow.width() }, opts.timeout, 'linear' );
-    });
 
-    slideshow.on( 'cycle-paused', function( e, opts ) {
-       progress.stop(); 
-    });
-
-    slideshow.on( 'cycle-resumed', function( e, opts, timeoutRemaining ) {
-        progress.animate({ 'width' : slideshow.width() }, timeoutRemaining, 'linear' );
-    });  
-    
-    
-    $(".cycle-togglePause").toggle(function(){
-        console.log('paused');
-        slideshow.cycle("pause");
-        $(".cycle-togglePause").text('► ');
-    },function(){
-        console.log('resumed');
-        slideshow.cycle("resume");
-        $(".cycle-togglePause").text('||');
-    });
 
 });

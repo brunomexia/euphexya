@@ -19,5 +19,11 @@ $ColError: #F86055;
 	-webkit-transition: all $speed ease-out;
     -moz-transition: all $speed ease-out;
     -o-transition: all $speed ease-out;
+    -ms-transition: all $speed ease-out;
     transition: all $speed ease-out;
+}
+
+@mixin box-sizing() {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }

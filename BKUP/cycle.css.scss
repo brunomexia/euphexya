@@ -1,4 +1,4 @@
-@import 'vars.css.scss';
+@import 'vars';
 
 /*CYCLE2 STYLES========================================
 
@@ -7,6 +7,10 @@
 =======================================================
 
 ========================================CYCLE2 STYLES*/
+
+.cycle-slideshow {
+    z-index:10;
+}
 
 #progress {
     position: absolute; top: 0; height: 6px; background: darken($ColPrimary, 15%); z-index: 2000;

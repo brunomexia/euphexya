@@ -1,16 +1,9 @@
 
-@import 'vars.css.scss';
-
-
-
-
-
-
+@import 'vars';
 
 
 
 /* Layout CSS */
-
 
 * { margin:0; padding:0; }
 html, body { width:100%; }
@@ -22,13 +15,13 @@ a { color: #111; text-decoration:none; }
 .clearfix { display: inline-block; }
 
 .pallet { margin-top:300px; display:none;
-	div { width:25px; height:45px; float:left; }
 
-	#accepted { background:$ColAccepted;}
-	#standard { background: $ColStandard;}
-	#primary { background:$ColPrimary;}
-	#warning {background:$ColWarning;}
-	#error {background:$ColError;}
+	div { width:25px; height:45px; float:left; }
+	#accepted { background: $ColAccepted; }
+	#standard { background: $ColStandard; }
+	#primary { background: $ColPrimary; }
+	#warning { background: $ColWarning; }
+	#error { background: $ColError; }
 }
 
 
@@ -56,7 +49,10 @@ a { color: #111; text-decoration:none; }
 	.logo { float:left; background:url('euphexya-logo-white.png'); padding:15px 0 15px 70px;
 		background-size: auto 100%; background-repeat: no-repeat;
 
-		h1 { font-weight:500; line-height:1; display:inline-block; }
+		h1 { color:$ColPrimary; font-weight:500; line-height:1; display:inline-block; 
+
+			a { color: #FAFAFA; }
+		}
 		span { display:inline-block; font-weight:300; font-size:0.75em; height:100%; margin: 0 0 0 15px; }
 	}
 
