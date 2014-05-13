@@ -23,7 +23,7 @@ $(function() {
             progress.animate({ width: '100%' }, timeoutRemaining, 'linear' );
         });
     	
-    	$(document).ready(function(){
+    	$(window).load(function(){
 
     		// Center Loader 
     		$('.loader div').css('margin-top', $(window).height()/2 - $('.loader div').outerHeight()/2);
@@ -45,8 +45,6 @@ $(function() {
             });
             
         });
-
-        
     
     }
 

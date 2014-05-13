@@ -13,7 +13,7 @@
 }
 
 #progress {
-    position: absolute; top: 0; height: 6px; background: darken($ColPrimary, 15%); z-index: 2000;
+    position: absolute; top: 0; height: 3px; background: darken($ColPrimary, 15%); z-index: 2000;
 }
 .cycle-slide {
 	width:100%; background-position:center !important;
@@ -21,7 +21,7 @@
 }
 .cycle-pager { 
     text-align: center; z-index: 500; position: absolute; top: 0; left:0; bottom:0; right:0; overflow: hidden;
-     border-top:6px solid lighten($ColPrimary, 10%); background:rgba(#111, 0.4);
+     border-top:3px solid lighten($ColPrimary, 10%); background:rgba(#111, 0.4);
 }
 .cycle-pager span { 
     font-family: arial; font-size: 50px; width: 16px; height: 16px; 
