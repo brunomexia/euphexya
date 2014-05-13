@@ -7,7 +7,7 @@
     rel='stylesheet' type='text/css'>
 
     <link rel="icon" href="assets/fav.ico" type="image/x-icon" />
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>  
+  <%= stylesheet_link_tag    "application", media: "all" , "data-turbolinks-track" => true  %>  <!---->
   <%= csrf_meta_tags %>
 </head>
 <body id="<%= controller_name %>" class="<%= action_name %>">
@@ -24,7 +24,8 @@
 
 <header class="mainhead clearfix">
 	<div class="logo">
-		<h1><%= link_to 'Euphexya', controller: 'welcome' %></h1><span>| Home of Knowledge | - Follow fresh and original tutorials</span>
+		<h1><a href="http://localhost:3000/" data-no-turbolink="true">Euphexya</a></h1>
+		<span>| Home of Knowledge | - Living to <b>T</b>each. Living to <b>L</b>earn.</span>
 	</div>
 	<nav class="clearfix">
 		<a href="#">Who We Are</a>
@@ -46,6 +47,6 @@
 
 
 
-<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "application" , "data-turbolinks-track" => true  %> <!-- , "data-turbolinks-track" => true  -->
 </body>
 </html>
