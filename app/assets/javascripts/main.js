@@ -3,6 +3,9 @@ $(function() {
     //HOMEPAGE JS
     if ($("#welcome.index").length) {
 
+        // Center Loader 
+        $('.loader div').css('margin-top', $(window).height()/2 - $('.loader div').outerHeight()/2);
+
         var progress = $('#progress'),
             slideshow = $( '.cycle-slideshow' );
 
@@ -22,28 +25,40 @@ $(function() {
         slideshow.on( 'cycle-resumed', function( e, opts, timeoutRemaining ) {
             progress.animate({ width: '100%' }, timeoutRemaining, 'linear' );
         });
+
+        // Assign respective DIV Backgrounds
+        $('.cycle-slide').each(function() {
+            var imgBg = $(this).attr('data-image-insert');
+            $(this).css('background', 'url("' + imgBg + '")');
+        });
     	
     	$(window).load(function(){
-
-    		// Center Loader 
-    		$('.loader div').css('margin-top', $(window).height()/2 - $('.loader div').outerHeight()/2);
+    		
 
     		// Body Positioning
     		var windowWidth = $(window).width(),
                 windowHeight = $(window).height(),
                 mhHeight = $('.mainhead').outerHeight(),                
-                homedesHeight = $('.home-destaque').outerHeight();
+                homedesHeight = $('.home-destaque').outerHeight(),
+                homedesTruePadding = (windowHeight - homedesHeight - mhHeight)/2;
 
             // Proper Height Space
             $('.body').css('margin-top', mhHeight);
-            // Proper Slider Height
-            $('.cycle-slide').css('height', windowHeight - mhHeight - homedesHeight);
-            // Assign respective DIV Backgrounds
-            $('.cycle-slide').each(function() {
-                var imgBg = $(this).attr('data-image-insert');
-                $(this).css('background', 'url("' + imgBg + '")');
-            });
-            
+            // Proper Slider Height and Padding Fix
+            $('.home_banner_cycle').css('padding-top', mhHeight);
+            $('.cycle-slide').css('height', windowHeight - mhHeight);
+            // Proper Destaque Height
+            $('.home-destaque').css({'padding-top': homedesTruePadding, 'padding-bottom': homedesTruePadding});
+                        
+        });
+
+        $(window).on('scroll', function() {
+            if($('.mainhead').offset().top > 10) {
+                $('.mainhead').css('opacity', 0.4);
+            }
+            else {
+                $('.mainhead').css('opacity', 1);
+            }
         });
     
     }

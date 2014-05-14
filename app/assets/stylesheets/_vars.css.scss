@@ -28,12 +28,12 @@ $ColError: #F86055;
     box-sizing: border-box;
 }
 
-@mixin primary-horz-grad($darkenPercent) {
-  background: darken($ColPrimary, $darkenPercent);
-  background: -moz-linear-gradient(left, darken($ColPrimary, $darkenPercent) 0%, $ColPrimary 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, $ColPrimary), color-stop(100%, $ColPrimary));
-  background: -webkit-linear-gradient(left, darken($ColPrimary, $darkenPercent) 0%, $ColPrimary 100%);
-  background: -o-linear-gradient(left, darken($ColPrimary, $darkenPercent) 0%, $ColPrimary 100%);
-  background: -ms-linear-gradient(left, darken($ColPrimary, $darkenPercent) 0%, $ColPrimary 100%);
-  background: linear-gradient(to right, darken($ColPrimary, $darkenPercent) 0%, $ColPrimary 100%);
+@mixin primary-horz-grad($targCol, $darkenPercent, $opac) {
+  background: darken($targCol, $darkenPercent);
+  background: -moz-linear-gradient(left, rgba(darken($targCol, $darkenPercent), $opac) 0%, rgba($targCol, $opac) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba($targCol, $opac)), color-stop(100%, rgba($targCol, $opac)));
+  background: -webkit-linear-gradient(left, rgba(darken($targCol, $darkenPercent), $opac) 0%, rgba($targCol, $opac) 100%);
+  background: -o-linear-gradient(left, rgba(darken($targCol, $darkenPercent), $opac) 0%, rgba($targCol, $opac) 100%);
+  background: -ms-linear-gradient(left, rgba(darken($targCol, $darkenPercent), $opac) 0%, rgba($targCol, $opac) 100%);
+  background: linear-gradient(to right, rgba(darken($targCol, $darkenPercent), $opac) 0%, rgba($targCol, $opac) 100%);
 }

@@ -5,6 +5,5 @@
 
 @import 'vars';
 
-.home-destaque { width:100%; min-height:165px; padding:25px 35px; color:#FAFAFA; background:#FAFAFA;
-	@include box-sizing();
- }
+.home_banner_cycle { }
+.home-destaque { width:100%; min-height:165px; padding:0; color:#FAFAFA; background:#FAFAFA; }

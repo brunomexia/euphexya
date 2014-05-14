@@ -9,6 +9,8 @@
 html, body { width:100%; }
 
 html { font-family:'Titillium Web', Segoe UI, Verdana, Arial, sans-serif; font-weight:300; }
+body { background:#FAFAFA; }
+
 a { color: #111; text-decoration:none; }
 
 .clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
@@ -43,9 +45,10 @@ a { color: #111; text-decoration:none; }
 
 
 
-.mainhead { position:fixed; top:0; left:0; right:0; /*background:rgba($ColPrimary, 0.95); */
-	padding:19px 35px; color:#fafafa; z-index:10000;
-	@include primary-horz-grad(4%);
+.mainhead { position:fixed; top:0; left:0; right:0; padding:19px 35px; color:#fafafa; z-index:10000;
+	@include transition(250ms); @include primary-horz-grad($ColPrimary, 7%, 1);
+
+	&:hover { opacity:1 !important; }
 
 	.logo { float:left; background:url('euphexya-logo-white.png'); padding:15px 0 15px 70px;
 		background-size: auto 100%; background-repeat: no-repeat;
@@ -56,7 +59,6 @@ a { color: #111; text-decoration:none; }
 		}
 		span { display:inline-block; font-weight:300; font-size:0.75em; height:100%; margin: 0 0 0 15px; }
 	}
-
 	nav { float:right; padding:15px 0;
 
 		a { display:block; float:left; color: #FAFAFA; background:rgba(lighten($ColPrimary, 24%), 0.4); 
@@ -75,8 +77,17 @@ a { color: #111; text-decoration:none; }
 
 
 
-body { background:$ColPrimary; }
+
 
 .body, footer { background:#FAFAFA; }
 
-footer { height:10000px; }
+footer { padding:25px 35px; color:#fafafa; background:#333; @include box-sizing(); 
+
+	p.bottom-para {
+		span.right-span {
+			padding-right:35px; float:right; font-weight:400; background:url('euphexya-logo-white.png'); background-size:auto 100%;
+			background-repeat:no-repeat; background-position:right;
+		}
+	}
+
+}
