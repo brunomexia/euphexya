@@ -54,10 +54,10 @@ $(function() {
 
         $(window).on('scroll', function() {
             if($('.mainhead').offset().top > 10) {
-                $('.mainhead').css('opacity', 0.4);
+                $('.mainhead').addClass('deact');
             }
             else {
-                $('.mainhead').css('opacity', 1);
+                $('.mainhead').removeClass('deact');
             }
         });
     
